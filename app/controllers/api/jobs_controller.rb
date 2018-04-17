@@ -1,8 +1,9 @@
 class Api::JobsController < ApplicationController
 	before_action :set_job, only: [:show, :update, :destroy]
 	
-	def index
-		@jobs = Job.all.order(:id)
+	def index 
+		# @jobs = Job.all.order(:id)
+		@jobs = Job.all
 		render json: @jobs
 	end
 
