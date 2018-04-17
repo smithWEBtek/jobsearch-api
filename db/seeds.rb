@@ -160,14 +160,40 @@ def make_todos
     new_todo.save
   end
 end
- 
+
+DATA_logs = {
+  :log_keys =>
+    ["todo_id", "note"],
+  :logs => [
+    [1, "Find the right contact"],
+    [1, "Follow up on meeting"],
+    [2, "Ask for referral"],
+    [2, "Research requirements"],
+    [3, "Find another contact to get in this company"],
+    [3, "Send thank you note."],
+    [4, "Do coding challenge."],
+    [4, "Prepare for interview."]
+  ]
+}
+
+def make_logs
+  DATA_logs[:logs].each do |log|
+    new_log = Log.new
+    log.each_with_index do |attribute, i|
+      new_log.send(DATA_logs[:log_keys][i]+"=", attribute)
+    end
+    new_log.save
+  end
+end
+
 def main
   make_companies
   make_contacts
   make_jobs
   make_steps
   make_users
-  make_todos
+	make_todos
+	make_logs
 end
 
 main

@@ -1,5 +1,5 @@
 class Api::UsersController < ApplicationController
-	before_action :set_user, only: [:show, :create, :destroy]
+	before_action :set_user, only: [:show, :update, :destroy]
  
   def index
 		@users = User.all

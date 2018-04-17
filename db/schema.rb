@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20170328033728) do
     t.string "state"
     t.string "url"
     t.text "about"
-    t.date "first_contact_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -100,7 +99,7 @@ ActiveRecord::Schema.define(version: 20170328033728) do
     t.text "portfolio_site_url"
     t.string "coach_name"
     t.string "coach_email"
-    t.string "coach_phone"
+    t.string "coach_slack"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

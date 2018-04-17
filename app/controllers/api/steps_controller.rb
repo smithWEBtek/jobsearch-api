@@ -1,5 +1,5 @@
 class Api::StepsController < ApplicationController
-  before_action :set_step, only: [:show, :edit, :update, :destroy]
+  before_action :set_step, only: [:show, :update, :destroy]
   
   def index
     @steps = Step.all.order(:id)

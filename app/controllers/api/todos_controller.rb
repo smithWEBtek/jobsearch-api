@@ -1,5 +1,5 @@
 class Api::TodosController < ApplicationController
-  before_action :set_todo, only: [:show, :edit, :update, :destroy]
+  before_action :set_todo, only: [:show, :update, :destroy]
   
 	def index   
     @todos = Todo.all
@@ -9,17 +9,13 @@ class Api::TodosController < ApplicationController
 	def show
 		render json: @todo
   end
-
-  def new
-    @todo = Todo.new
-  end
-
+ 
   def create
     @todo = User.find_by_id(params[:id]).todos.build(todo_params)
     if @todo.save
-      redirect_to :new
-    else
       render json: @todo
+    else
+      render json: { message: 'Todo NOT created.'}
     end
   end
 
@@ -29,20 +25,15 @@ class Api::TodosController < ApplicationController
   def update
     @todo.update(todo_params)
     if @todo.save
-      flash[:notice] = 'Todo updated.'
-      redirect_to user_todos_path(User.find_by_id(params[:id]))
+      render json: @todo
     else
-      render :edit
+      render json: { message: 'Todo NOT updated.'}
     end
   end
 
   def destroy
-    if @todo.delete
-      flash[:notice] = 'Todo deleted.'
-      redirect_to user_todos_path(User.find_by_id(params[:id]))
-    else
-      render user_todos_path(User.find_by_id(params[:id]))
-    end
+  	@todo.delete
+    render json: { message: 'Todo deleted.'}
   end
 
   private
