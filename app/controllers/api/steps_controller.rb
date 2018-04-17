@@ -3,42 +3,34 @@ class Api::StepsController < ApplicationController
   
   def index
     @steps = Step.all.order(:id)
-    # render json: @steps
+    render json: @steps
   end
 
-  def show
+	def show
+		render json: @step
   end
-
-  def new
-    @step = Step.new
-  end
-
+ 
   def create
     @step = Step.new(step_params)
     if @step.save
-      flash[:message] = 'Step created.'
-      redirect_to step_path(@step)
+      render json: @step
     else
-      render :new
+      render json: { message: "Step NOT created."}
     end
-  end
-
-  def edit
   end
 
   def update
     @step.update(step_params)
     if @step.save
-      flash[:message] = 'Step updated.'
-      redirect_to step_path(@step)
+      render json: @step
     else
-      render :edit
+      render json: { message: 'Step NOT updated.'}
     end
   end
 
   def destroy
     @step.destroy
-    redirect_to root_path
+    render json: { message: 'Step deleted.'}
   end
 
   private

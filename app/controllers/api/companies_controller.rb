@@ -1,44 +1,36 @@
 class Api::CompaniesController < ApplicationController
-  before_action :set_company, only: [:show, :edit, :update, :destroy]
+  before_action :set_company, only: [:show, :update, :destroy]
   
   def index
     @companies = Company.all.order(:name)
-    # render json: @companies
+    render json: @companies
   end
-
+	
   def show
+		render json: @company
   end
-
-  def new
-    @company = Company.new
-  end
-
+	
   def create
     @company = Company.new(company_params)
     if @company.save
-      flash[:message] = 'Company created.'
-      redirect_to company_path(@company)
+			render json: @company
     else
-      render :new
+			render json: { errors: { message: 'Company NOT created' }}
     end
   end
-
-  def edit
-  end
-
+	
   def update
     @company.update(company_params)
     if @company.save
-      flash[:message] = 'Company updated.'
-      redirect_to company_path(@company)
+			render json: @company
     else
-      render :edit
+			render json: { errors: { message: 'Company NOT updated' }}
     end
   end
 
   def destroy
     @company.destroy
-    redirect_to root_path
+		render json: { message: 'Company deleted.' }
   end
 
   private

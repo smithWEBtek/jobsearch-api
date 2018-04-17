@@ -1,46 +1,36 @@
 class Api::ContactsController < ApplicationController
-  before_action :set_contact, only: [:show, :edit, :update, :destroy]
+  before_action :set_contact, only: [:show, :update, :destroy]
   
   def index
-    # @contacts = current_user.contacts
     @contacts = Contact.all
-    # render json: @contacts
+    render json: @contacts
   end
-
+	
   def show
-    @contact_todos = Todo.all.where(contact_id: params[:contact_id])
-  end
-
-  def new
-    @contact = Contact.new
+		render json: @contact
   end
 
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      flash[:message] = 'Contact created.'
-      redirect_to contact_path(@contact)
+      render json: @contact
     else
-      render :new
+			render json: { errors: { message: 'Contact NOT created' }}
     end
   end
-
-  def edit
-  end
-
+	
   def update
     @contact.update(contact_params)
-    if @contact.save
-      flash[:message] = 'Contact updated.'
-      redirect_to contact_path(@contact)
+		if @contact.save
+			render json: @contact
     else
-      render :edit
+			render json: { errors: { message: 'Contact NOT updated' }}
     end
   end
 
   def destroy
     @contact.destroy
-    redirect_to root_path
+		render json: { message: 'Contact deleted.' }
   end
 
   private
@@ -49,6 +39,6 @@ class Api::ContactsController < ApplicationController
   end
 
   def contact_params
-    params.require(:contact).permit(:org_id, :fname, :lname, :title, :email, :phone, :url, :about, :history)
+    params.require(:contact).permit(:fname, :lname, :title, :email, :phone, :url, :about, :linkedin, :twitter)
   end
 end

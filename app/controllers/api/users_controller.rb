@@ -1,5 +1,5 @@
 class Api::UsersController < ApplicationController
-	before_action :set_user, only: [:show, :edit, :create, :destroy]
+	before_action :set_user, only: [:show, :create, :destroy]
  
   def index
 		@users = User.all
@@ -12,51 +12,36 @@ class Api::UsersController < ApplicationController
 		render json: @user
   end
 
-  def new
-    @user = User.new
-  end
-
   def create
     @user = User.create(user_params)
     if @user.save
-      flash[:notice] = "Welcome, #{@user.username.upcase}! you have successfully signed up, please SIGN IN."
-      redirect_to root_path
+      render json: @user
     else
-      render :new
+      render json: {message: 'User NOT created.'}
     end
-  end
-
-  def edit
-    @user = User.find_by_id(params[:id])
   end
 
   def update
     @user.update_without_password(user_params)
     if @user.save
-      flash[:notice] = 'User Account updated.'
-      redirect_to user_path(@user)
+      render json: @user
     else
-      render :edit
+      render Json: { message: "User NOT updated"}
     end
   end
 
   def destroy
-    if @user.delete
-      flash[:notice] = 'User deleted'
-      redirect_to root_path
-    else
-      flash[:notice] = @user.errors.full_messages
-      redirect_to user_path(@user)
-    end
+    @user.delete
+		render json: { message: "User deleted."}
   end
 
   private
-
   def set_user
 		@user = User.find_by_id(params[:id])
 	end
 
   def user_params
-    params.require(:user).permit(:email, :password)
+		params.require(:user).permit(:name, :email, :password, :phone1, :phone2, :address_line1, :address_line2, :city, :state, :zip, :elevator_pitch, :resume, :twitter_url, :linkedin_url, :github_url, :learn_student_profile_url, :blog_site_url, :portfolio_site_url, :coach_name, :coach_email, :coach_slack)
   end
 end
+

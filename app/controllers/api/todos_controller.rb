@@ -1,52 +1,25 @@
 class Api::TodosController < ApplicationController
   before_action :set_todo, only: [:show, :edit, :update, :destroy]
   
-	def index
-		@user = User.find_by_id(params[:id])
-    @company_todos = Todo.all.where(company_id: params[:company_id])
-    @contact_todos = Todo.all.where(contact_id: params[:contact_id])
-    @job_todos = Todo.all.where(job_id: params[:job_id])    
-    @todos = User.find_by_id(params[:id]).todos
-   
-    # render 'todos/index', layout: false
-    # render :index, layout: false
-    # render layout: false
-
-    # render json: @user_todos
-
-    # render 'todos/todos', locals: { todos: @user_todos }, layout: false
-    # render 'todos/user_todos', locals: { todos: @user_todos }, layout: false
-    # render json: { partial: 'todos/user_todos', locals: { todos: @user_todos }, layout: false }
-    # render { partial: 'todos/user_todos', locals: { todos: @user_todos }, layout: false }
-    # render 'todos/user_todos', locals: { todos: @user_todos }
-    # render partial: 'todos/user_todos', layout: false  
-
-    # respond_to do |format|
-    #   format.html { render 'index.html'}
-    #   format.js { render 'index.js'}
-    # end
-    # render 'index.js', layout: false
+	def index   
+    @todos = Todo.all
+    render json: @todos
   end
    
-  def show
+	def show
+		render json: @todo
   end
 
   def new
-    @user = User.find_by_id(params[:id])
-    @todo = @user.todos.build(due_date: Time.now)
+    @todo = Todo.new
   end
 
   def create
     @todo = User.find_by_id(params[:id]).todos.build(todo_params)
     if @todo.save
-      # flash[:notice] = 'Todo created by RAILS!'
-      # redirect_to user_todos_path(User.find_by_id(params[:id]))
-      # redirect_to user_path(User.find_by_id(params[:id]))
-      # render 'todos/todo', layout: false
-      render 'index.js', layout: false
-
+      redirect_to :new
     else
-      render 'todos/show'
+      render json: @todo
     end
   end
 
@@ -78,6 +51,6 @@ class Api::TodosController < ApplicationController
   end
 
   def todo_params
-    params.require(:todo).permit(:user_id, :step_id, :job_id, :contact_id, :company_id, :date, :notes, :priority)
+    params.require(:todo).permit(:user_id, :step_id, :job_id, :contact_id, :company_id, :due_date, :description, :priority)
   end
 end

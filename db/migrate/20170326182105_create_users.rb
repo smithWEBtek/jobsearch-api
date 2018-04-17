@@ -22,8 +22,8 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.text   :portfolio_site_url
 
       t.string :coach_name
-      t.string :coach_email
-      t.string :coach_phone
+			t.string :coach_email
+			t.string :coach_slack
 
       t.timestamps
     end
