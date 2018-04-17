@@ -1,4 +1,4 @@
-class StepsController < ApplicationController
+class Api::StepsController < ApplicationController
   before_action :set_step, only: [:show, :edit, :update, :destroy]
   
   def index

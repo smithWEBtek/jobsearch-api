@@ -1,16 +1,15 @@
-class UsersController < ApplicationController
-  # before_action :authorize_admin, only: [:destroy]
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:show]
-
+class Api::UsersController < ApplicationController
+	before_action :set_user, only: [:show, :edit, :create, :destroy]
+ 
   def index
-    @users = User.all
+		@users = User.all
+		render json: @users
   end
 
   def show
-    @user = current_user
+    @user = User.find_by_id(params[:id])
     @todo = @user.todos.build
-    @todos = current_user.todos
+		render json: @user
   end
 
   def new
@@ -54,8 +53,8 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    @user = User.find_by_id(params[:id])
-  end
+		@user = User.find_by_id(params[:id])
+	end
 
   def user_params
     params.require(:user).permit(:email, :password)

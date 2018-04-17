@@ -1,4 +1,4 @@
-class LogsController < ApplicationController
+class Api::LogsController < ApplicationController
 
 
   def action_logs

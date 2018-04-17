@@ -1,4 +1,4 @@
-class JobsController < ApplicationController
+class Api::JobsController < ApplicationController
   before_action :set_job, only: [:show, :edit, :update, :destroy]
   
   def index

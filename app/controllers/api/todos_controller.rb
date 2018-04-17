@@ -1,17 +1,12 @@
-class TodosController < ApplicationController
+class Api::TodosController < ApplicationController
   before_action :set_todo, only: [:show, :edit, :update, :destroy]
   
-  def admin
-    @todos = Todo.all # constrain this to admin only eventually
-    render :admin
-  end
-
 	def index
 		@user = User.find_by_id(params[:id])
     @company_todos = Todo.all.where(company_id: params[:company_id])
     @contact_todos = Todo.all.where(contact_id: params[:contact_id])
     @job_todos = Todo.all.where(job_id: params[:job_id])    
-    @todos = current_user.todos
+    @todos = User.find_by_id(params[:id]).todos
    
     # render 'todos/index', layout: false
     # render :index, layout: false
@@ -37,16 +32,16 @@ class TodosController < ApplicationController
   end
 
   def new
-    @user = current_user
+    @user = User.find_by_id(params[:id])
     @todo = @user.todos.build(due_date: Time.now)
   end
 
   def create
-    @todo = current_user.todos.build(todo_params)
+    @todo = User.find_by_id(params[:id]).todos.build(todo_params)
     if @todo.save
       # flash[:notice] = 'Todo created by RAILS!'
-      # redirect_to user_todos_path(current_user)
-      # redirect_to user_path(current_user)
+      # redirect_to user_todos_path(User.find_by_id(params[:id]))
+      # redirect_to user_path(User.find_by_id(params[:id]))
       # render 'todos/todo', layout: false
       render 'index.js', layout: false
 
@@ -62,7 +57,7 @@ class TodosController < ApplicationController
     @todo.update(todo_params)
     if @todo.save
       flash[:notice] = 'Todo updated.'
-      redirect_to user_todos_path(current_user)
+      redirect_to user_todos_path(User.find_by_id(params[:id]))
     else
       render :edit
     end
@@ -71,9 +66,9 @@ class TodosController < ApplicationController
   def destroy
     if @todo.delete
       flash[:notice] = 'Todo deleted.'
-      redirect_to user_todos_path(current_user)
+      redirect_to user_todos_path(User.find_by_id(params[:id]))
     else
-      render user_todos_path(current_user)
+      render user_todos_path(User.find_by_id(params[:id]))
     end
   end
 
