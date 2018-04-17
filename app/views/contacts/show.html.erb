@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="page-header">
+      <h4>Contact</h4></div>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Title </th>
+            <th>Email </th>
+            <th>Phone </th>
+            <th>URL </th>
+            <th>About </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @contact.id %></td>
+            <td><%= @contact.fname %> <%= @contact.lname %></td>
+            <td><%= @contact.company.name %></td>
+            <td><%= @contact.title %></td>
+            <td><%= @contact.email %></td>
+            <td><%= @contact.phone %></td>
+            <td><%= @contact.url %></td>
+            <td><%= @contact.about %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3>Current todos for this contact: </h3>
+      <%= render partial: 'todos/contact_todos', locals: { todos: @contact_todos } %>  
+    </div>
+  </div>
+</div>
