@@ -8,7 +8,7 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find_by_id(params[:id])
-    @todo = @user.todos.build
+    @task = @user.tasks.build
 		render json: @user
   end
 

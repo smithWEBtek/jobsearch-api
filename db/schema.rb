@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20170328033728) do
   end
 
   create_table "logs", id: :serial, force: :cascade do |t|
-    t.integer "todo_id"
+    t.integer "task_id"
     t.text "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20170328033728) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "todos", id: :serial, force: :cascade do |t|
+  create_table "tasks", id: :serial, force: :cascade do |t|
     t.integer "user_id"
     t.integer "step_id", default: 1
     t.integer "job_id", default: 1

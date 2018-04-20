@@ -39,7 +39,7 @@ class Api::LogsController < ApplicationController
 		end
 	
 		def log_params
-			params.require(:log).permit(:todo_id, :note)
+			params.require(:log).permit(:task_id, :note)
 		end
 	end
 	

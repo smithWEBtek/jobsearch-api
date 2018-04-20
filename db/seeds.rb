@@ -136,10 +136,10 @@ def make_users
   end
 end
 
-DATA_todos = {
-  :todo_keys =>
+DATA_tasks = {
+  :task_keys =>
     ["user_id", "step_id", "job_id", "contact_id", "company_id", "due_date", "description", "priority"],
-  :todos => [
+  :tasks => [
     [1, 2, 1, 1, 1, "2017-03-26", "get on it man!", 1],
     [1, 3, 2, 2, 1, "2017-03-26", "had a good phone interview", 2],
     [2, 1, 3, 3, 1, "2017-04-15", "looking for PHP Guru", 3],
@@ -151,19 +151,19 @@ DATA_todos = {
   ]
 }
 
-def make_todos
-  DATA_todos[:todos].each do |todo|
-    new_todo = Todo.new
-    todo.each_with_index do |attribute, i|
-      new_todo.send(DATA_todos[:todo_keys][i]+"=", attribute)
+def make_tasks
+  DATA_tasks[:tasks].each do |task|
+    new_task = Task.new
+    task.each_with_index do |attribute, i|
+      new_task.send(DATA_tasks[:task_keys][i]+"=", attribute)
     end
-    new_todo.save
+    new_task.save
   end
 end
 
 DATA_logs = {
   :log_keys =>
-    ["todo_id", "note"],
+    ["task_id", "note"],
   :logs => [
     [1, "Find the right contact"],
     [1, "Follow up on meeting"],
@@ -192,7 +192,7 @@ def main
   make_jobs
   make_steps
   make_users
-	make_todos
+	make_tasks
 	make_logs
 end
 
