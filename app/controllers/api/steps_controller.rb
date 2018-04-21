@@ -2,7 +2,7 @@ class Api::StepsController < ApplicationController
   before_action :set_step, only: [:show, :update, :destroy]
   
   def index
-    @steps = Step.all.order(:id)
+    @steps = Step.all
     render json: @steps
   end
 
