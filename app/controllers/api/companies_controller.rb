@@ -10,7 +10,7 @@ class Api::CompaniesController < ApplicationController
 		render json: @company
   end
 	
-  def create
+	def create
     @company = Company.new(company_params)
     if @company.save
 			render json: @company
