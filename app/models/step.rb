@@ -1,5 +1,5 @@
 class Step < ApplicationRecord
-  has_many :todos
+  has_many :tasks
 
   def tech_prep
     # study
@@ -7,16 +7,16 @@ class Step < ApplicationRecord
     # blog
   end
 
-  def branding    # (user.todos.build to complete each of these fields in Users table)
-    # todo_elevator_pitch
-    # todo_resume?
-    # todo_twitter_url?
-    # todo_linkedin_url?
-    # todo_github_url?
-    # todo_learn_student_profile_url?
-    # todo_blog_site_url?
-    # todo_portfolio_site_url?
-    # todo_github_API_track_commits
+  def branding    # (user.tasks.build to complete each of these fields in Users table)
+    # task_elevator_pitch
+    # task_resume?
+    # task_twitter_url?
+    # task_linkedin_url?
+    # task_github_url?
+    # task_learn_student_profile_url?
+    # task_blog_site_url?
+    # task_portfolio_site_url?
+    # task_github_API_track_commits
   end
 
   def job_search(student)
@@ -25,8 +25,8 @@ class Step < ApplicationRecord
   end
 
   def job_apply
-    # job_instructions_todo_steps_created?
-    # job_instructions_todos_completed?
+    # job_instructions_task_steps_created?
+    # job_instructions_tasks_completed?
     # job_org_contact_info_entered?
   end
 

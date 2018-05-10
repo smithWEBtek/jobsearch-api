@@ -1,6 +1,6 @@
 class Contact < ApplicationRecord
   belongs_to :company
-  has_many :todos
+  has_many :tasks
 
   def name
     "#{self.fname}" + " " + "#{self.lname}"

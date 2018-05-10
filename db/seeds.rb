@@ -1,199 +1,112 @@
-DATA_companies = {
-  :company_keys =>
-    ["name", "city", "state", "url", "about"],
-  :companies => [
-    ["Network", "hometown", "homestate", "me.com", "about me"],
-    ["Acme", "Albany", "NY", "http://www.acme.com", "Coyote is after you."],
-    ["Sears", "Clifton", "NJ", "http://www.sears.com", "Everything for the home."],
-    ["Walmart", "Bentonville", "AK", "http://www.walmart.com", "Always the low price."],
-    ["Ace Hardware", "Tulsa", "OK", "http://www.acehardware.com", "Ace is the place for the helpful hardware mammal."],
-    ["JB Hunt", "Chicago", "IL", "http://www.jbhunt.com", "Ship it!"],
-    ["Pepsi Co", "Louisville", "KY", "http://www.pepsico.com", "You want Pepsi, not Coke"],
-    ["deleted"]
-  ]
-}
+def companies
+	Company.create!([
+		{name: "Network", city: "hometown", state: "homestate", url: "me.com", about: "about me"},
+		{name: "Acme", city: "Albany", state: "NY", url: "http://www.acme.com", about: "Coyote is after you."},
+		{name: "Sears", city: "Clifton", state: "NJ", url: "http://www.sears.com", about: "Everything for the home."},
+		{name: "Walmart", city: "Bentonville", state: "AK", url: "http://www.walmart.com", about: "Always the low price."},
+		{name: "Ace Hardware", city: "Tulsa", state: "OK", url: "http://www.acehardware.com", about: "Ace is the place for the helpful hardware mammal."},
+		{name: "JB Hunt", city: "Chicago", state: "IL", url: "http://www.jbhunt.com", about: "Ship it!"},
+		{name: "Pepsi Co", city: "Louisville", state: "KY", url: "http://www.pepsico.com", about: "You want Pepsi, not Coke"},
+		{name: "annkissam", city: "Boston", state: "MA", url: "http://www.annkissam.com/careers", about: "Annkissam was founded in 2007 to provide innovative, affordable technology solutions for mission-driven organizations. "}
+	])
+end 
 
-def make_companies
-  DATA_companies[:companies].each do |company|
-    new_company = Company.new
-    company.each_with_index do |attribute, i|
-      new_company.send(DATA_companies[:company_keys][i]+"=", attribute)
-    end
-    new_company.save
-  end
-end
- 
-DATA_contacts = {
-  :contact_keys =>
-    ["company_id", "fname", "lname", "title", "email", "phone", "url", "about"],
-  :contacts => [
-    [1, "Brad", "Smith", "Owner", "brad@smithwebtek.com", "603-494-4147", "http://www.smithwebtek.com", "Web dev prepping"],
-    [1, "Jerry", "Seinfeld", "Star", "jerry@seinfeld.com", "212-313-4234", "http://www.seinfeld.com", "Not that there's anything wrong with that.."],
-    [1, "Barney", "Rubble", "Quarry Worker", "barney@rock.com", "243-113-2441", "http://www.rock.com", "Hey Fred! Are bowling or what?"],
-    [1, "Fred", "Flintstone", "Quarry Boss", "fred@rock.com", "608-495-4887", "http://www.rock.com", "Is dinner ready?"]
-  ]
-}
-
-def make_contacts
-  DATA_contacts[:contacts].each do |contact|
-    new_contact = Contact.new
-    contact.each_with_index do |attribute, i|
-      new_contact.send(DATA_contacts[:contact_keys][i]+"=", attribute)
-    end
-    new_contact.save
-  end
+def contacts
+	Contact.create!([
+		{company_id: 1, fname: "Brad", lname: "Smith", title: "Owner", email: "brad@smithwebtek.com", phone: "603-494-4147", url: "http://www.smithwebtek.com", linkedin: nil, twitter: nil, about: "Web dev prepping"},
+		{company_id: 1, fname: "Jerry", lname: "Seinfeld", title: "Star", email: "jerry@seinfeld.com", phone: "212-313-4234", url: "http://www.seinfeld.com", linkedin: nil, twitter: nil, about: "Not that there's anything wrong with that.."},
+		{company_id: 1, fname: "Barney", lname: "Rubble", title: "Quarry Worker", email: "barney@rock.com", phone: "243-113-2441", url: "http://www.rock.com", linkedin: nil, twitter: nil, about: "Hey Fred! Are bowling or what?"},
+		{company_id: 1, fname: "Fred", lname: "Flintstone", title: "Quarry Boss", email: "fred@rock.com", phone: "608-495-4887", url: "http://www.rock.com", linkedin: nil, twitter: nil, about: "Is dinner ready?"}
+	])
 end
 
-DATA_jobs = {
-  :job_keys =>
-    ["title", "url", "company_id", "description", "requirements", "instructions"],
-  :jobs => [
-    ["jr rails dev", "http://www.monster.com?job_id=1", 1, "rails dev needed", "rails, js, ajax", "apply online"],
-    ["full stack dev", "http://www.monster.com?job_id=2", 1, "full stack shop", "python, js, ajax, node", "send resume, call HR"],
-    ["rails team member", "http://www.monster.com?job_id=3", 1, "rails R us", "rails, js, ajax, ember, SQL", "apply by April 23"],
-    ["front end dev", "http://www.monster.com?job_id=4", 1, "pretty sites wanted", "bootstrap, js, css", "apply online, send URLs of your work"],
-    ["web dev", "http://www.monster.com?job_id=5", 1, "web dev with strong SQL skills", "wordpress, drupal, SQL Server", "email resume, NO CALLS"],
-    ["software engineer", "http://www.monster.com?job_id=6", 1, "application dev with some web aspects", "C#, .NET, rails, js, ajax", "online technical test first"]
-  ]
-}
-
-def make_jobs
-  DATA_jobs[:jobs].each do |job|
-    new_job = Job.new
-    job.each_with_index do |attribute, i|
-      new_job.send(DATA_jobs[:job_keys][i]+"=", attribute)
-    end
-    new_job.save
-  end
+def jobs 
+	Job.create!([
+		{title: "jr rails dev", url: "http://www.monster.com?job_id=1", company_id: 1, description: "rails dev needed", requirements: "rails, js, ajax", instructions: "apply online"},
+		{title: "full stack dev", url: "http://www.monster.com?job_id=2", company_id: 1, description: "full stack shop", requirements: "python, js, ajax, node", instructions: "send resume, call HR"},
+		{title: "rails team member", url: "http://www.monster.com?job_id=3", company_id: 1, description: "rails R us", requirements: "rails, js, ajax, ember, SQL", instructions: "apply by April 23"},
+		{title: "front end dev", url: "http://www.monster.com?job_id=4", company_id: 1, description: "pretty sites wanted", requirements: "bootstrap, js, css", instructions: "apply online, send URLs of your work"},
+		{title: "web dev", url: "http://www.monster.com?job_id=5", company_id: 1, description: "web dev with strong SQL skills", requirements: "wordpress, drupal, SQL Server", instructions: "email resume, NO CALLS"},
+		{title: "software engineer", url: "http://www.monster.com?job_id=6", company_id: 1, description: "application dev with some web aspects", requirements: "C#, .NET, rails, js, ajax", instructions: "online technical test first"}
+	])
 end
 
-DATA_steps ={
- :step_keys =>
-    ["name", "category"],
-  :steps => [
-    ["choose_step!", "choose_step!"],
-    ["study", "techprep"],
-    ["code", "techprep"],
-    ["gitcommit", "techprep"],
-    ["blog", "techprep"],
+def steps
+	Step.create!([
+		{name: "choose_step!", category: "choose_step!"},
+		{name: "study", category: "techprep"},
+		{name: "code", category: "techprep"},
+		{name: "gitcommit", category: "techprep"},
+		{name: "blog", category: "techprep"},
+		{name: "elevator_pitch", category: "branding"},
+		{name: "resume", category: "branding"},
+		{name: "twitter_url", category: "branding"},
+		{name: "linkedin_url", category: "branding"},
+		{name: "github_url", category: "branding"},
+		{name: "learn_student_profile_url", category: "branding"},
+		{name: "blog_site_url", category: "branding"},
+		{name: "portfolio_site_url", category: "branding"},
+		{name: "git_count_commits_via_API", category: "branding"},
+		{name: "research", category: "jobsearch"},
+		{name: "network", category: "jobsearch"},
+		{name: "apply", category: "jobsearch"},
+		{name: "email", category: "jobsearch"},
+		{name: "call", category: "jobsearch"},
+		{name: "meeting", category: "jobsearch"},
+		{name: "interview", category: "jobsearch"},
+		{name: "fup", category: "jobsearch"}
+	])
+end 
 
-    ["elevator_pitch", "branding"],
-    ["resume", "branding"],
-    ["twitter_url", "branding"],
-    ["linkedin_url", "branding"],
-    ["github_url", "branding"],
-    ["learn_student_profile_url", "branding"],
-    ["blog_site_url", "branding"],
-    ["portfolio_site_url", "branding"],
-    ["git_count_commits_via_API", "branding"],
+def users
+	User.create!([
+		{name: nil, email: "ned@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
+		{name: nil, email: "max@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
+		{name: nil, email: "skai@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
+		{name: nil, email: "kaleo@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
+		{name: nil, email: "megan@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
+		{name: nil, email: "tenzing@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
+		{name: nil, email: "davis@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
+		{name: nil, email: "cole@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
+		{name: nil, email: "ted@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
+		{name: nil, email: "fred@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil}
+	])
+end 
 
-    ["research", "jobsearch"],
-    ["network", "jobsearch"],
-    ["apply", "jobsearch"],
-    ["email", "jobsearch"],
-    ["call", "jobsearch"],
-    ["meeting", "jobsearch"],
-    ["interview", "jobsearch"],
-    ["fup", "jobsearch"]
-  ]
-}
-
-def make_steps
-  DATA_steps[:steps].each do |step|
-    new_step = Step.new
-    step.each_with_index do |attribute, i|
-      new_step.send(DATA_steps[:step_keys][i]+"=", attribute)
-    end
-    new_step.save
-  end
-end
- 
-
-DATA_users ={
- :user_keys =>
-    ["email", "password"],
-  :users => [
-    ["ned@abc.com", "pointer"],
-    ["max@abc.com", "pointer"],
-    ["skai@abc.com", "pointer"],
-    ["kaleo@abc.com", "pointer"],
-    ["megan@abc.com", "pointer"],
-    ["tenzing@abc.com", "pointer"],
-    ["davis@abc.com", "pointer"],
-    ["cole@abc.com", "pointer"],
-    ["ted@abc.com", "pointer"],
-    ["fred@abc.com", "pointer"]
-  ]
-}
-
-def make_users
-  DATA_users[:users].each do |user|
-    new_user = User.new
-    user.each_with_index do |attribute, i|
-      new_user.send(DATA_users[:user_keys][i]+"=", attribute)
-    end
-    new_user.save
-  end
+def tasks
+	Task.create!([
+		{user_id: 1, step_id: 2, job_id: 1, contact_id: 1, company_id: 1, due_date: "2017-03-26", description: "get on it man!", priority: 1},
+		{user_id: 1, step_id: 3, job_id: 2, contact_id: 2, company_id: 1, due_date: "2017-03-26", description: "had a good phone interview", priority: 2},
+		{user_id: 2, step_id: 1, job_id: 3, contact_id: 3, company_id: 1, due_date: "2017-04-15", description: "looking for PHP Guru", priority: 3},
+		{user_id: 2, step_id: 4, job_id: 4, contact_id: 4, company_id: 1, due_date: "2017-04-12", description: "great Rails shop, jrs welcome", priority: 4},
+		{user_id: 3, step_id: 10, job_id: 5, contact_id: 1, company_id: 1, due_date: "2017-03-30", description: "get on it man!", priority: 1},
+		{user_id: 3, step_id: 16, job_id: 1, contact_id: 2, company_id: 1, due_date: "2017-05-30", description: "no data on this yet", priority: 2},
+		{user_id: 4, step_id: 17, job_id: 2, contact_id: 4, company_id: 1, due_date: "2017-04-03", description: "need to find HR contact", priority: 3},
+		{user_id: 4, step_id: 18, job_id: 3, contact_id: 3, company_id: 1, due_date: "2017-03-28", description: "my friend knows a guy here", priority: 1}
+	])
 end
 
-DATA_todos = {
-  :todo_keys =>
-    ["user_id", "step_id", "job_id", "contact_id", "company_id", "due_date", "description", "priority"],
-  :todos => [
-    [1, 2, 1, 1, 1, "2017-03-26", "get on it man!", 1],
-    [1, 3, 2, 2, 1, "2017-03-26", "had a good phone interview", 2],
-    [2, 1, 3, 3, 1, "2017-04-15", "looking for PHP Guru", 3],
-    [2, 4, 4, 4, 1, "2017-04-12", "great Rails shop, jrs welcome", 4],
-    [3, 10, 5, 1, 1, "2017-03-30", "get on it man!", 1],
-    [3, 16, 1, 2, 1, "2017-05-30", "no data on this yet", 2],
-    [4, 17, 2, 4, 1, "2017-04-03", "need to find HR contact", 3],
-    [4, 18, 3, 3, 1, "2017-03-28", "my friend knows a guy here", 1]
-  ]
-}
-
-def make_todos
-  DATA_todos[:todos].each do |todo|
-    new_todo = Todo.new
-    todo.each_with_index do |attribute, i|
-      new_todo.send(DATA_todos[:todo_keys][i]+"=", attribute)
-    end
-    new_todo.save
-  end
-end
-
-DATA_logs = {
-  :log_keys =>
-    ["todo_id", "note"],
-  :logs => [
-    [1, "Find the right contact"],
-    [1, "Follow up on meeting"],
-    [2, "Ask for referral"],
-    [2, "Research requirements"],
-    [3, "Find another contact to get in this company"],
-    [3, "Send thank you note."],
-    [4, "Do coding challenge."],
-    [4, "Prepare for interview."]
-  ]
-}
-
-def make_logs
-  DATA_logs[:logs].each do |log|
-    new_log = Log.new
-    log.each_with_index do |attribute, i|
-      new_log.send(DATA_logs[:log_keys][i]+"=", attribute)
-    end
-    new_log.save
-  end
+def logs
+	Log.create!([
+		{task_id: 1, note: "Find the right contact"},
+		{task_id: 1, note: "Follow up on meeting"},
+		{task_id: 2, note: "Ask for referral"},
+		{task_id: 2, note: "Research requirements"},
+		{task_id: 3, note: "Find another contact to get in this company"},
+		{task_id: 3, note: "Send thank you note."},
+		{task_id: 4, note: "Do coding challenge."},
+		{task_id: 4, note: "Prepare for interview."}
+	])
 end
 
 def main
-  make_companies
-  make_contacts
-  make_jobs
-  make_steps
-  make_users
-	make_todos
-	make_logs
+	companies
+	contacts
+	users
+	steps
+	jobs
+	tasks
+	logs
 end
 
 main

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root 'api/todos#index'
+  root 'api/tasks#index'
 
 	namespace :api do
 		resources :steps
@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 		resources :jobs
 		resources :contacts
 		resources :users
-		resources :todos
+		resources :tasks
 		resources :logs
 	end
 end

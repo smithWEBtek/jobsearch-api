@@ -1,6 +1,6 @@
-class CreateTodos < ActiveRecord::Migration[5.0]
+class CreateTasks < ActiveRecord::Migration[5.0]
   def change
-    create_table :todos do |t|
+    create_table :tasks do |t|
       t.integer :user_id
       t.integer :step_id, default: 1
       t.integer :job_id, default: 1

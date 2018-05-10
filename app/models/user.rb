@@ -1,10 +1,10 @@
 class User < ApplicationRecord
-  has_many :todos
-  has_many :jobs, through: :todos
-  has_many :contacts, through: :todos
-  has_many :companies, through: :todos
-  has_many :steps, through: :todos
-  has_many :logs, through: :todos
+  has_many :tasks
+  has_many :jobs, through: :tasks
+  has_many :contacts, through: :tasks
+  has_many :companies, through: :tasks
+  has_many :steps, through: :tasks
+  has_many :logs, through: :tasks
 
   validates :email, presence: true, uniqueness: true
  

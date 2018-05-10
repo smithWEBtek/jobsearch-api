@@ -1,8 +1,8 @@
-class Api::TodosController < ApplicationController
+class Api::TasksController < ApplicationController
   before_action :set_task, only: [:show, :update, :destroy]
   
 	def index   
-    @tasks = Todo.all
+    @tasks = Task.all
     render json: @tasks
   end
    
@@ -15,7 +15,7 @@ class Api::TodosController < ApplicationController
     if @task.save
       render json: @task
     else
-      render json: { message: 'Todo NOT created.'}
+      render json: { message: 'Task NOT created.'}
     end
   end
 
@@ -27,18 +27,18 @@ class Api::TodosController < ApplicationController
     if @task.save
       render json: @task
     else
-      render json: { message: 'Todo NOT updated.'}
+      render json: { message: 'Task NOT updated.'}
     end
   end
 
   def destroy
   	@task.delete
-    render json: { message: 'Todo deleted.'}
+    render json: { message: 'Task deleted.'}
   end
 
   private
   def set_task
-    @task = Todo.find_by_id(params[:id])
+    @task = Task.find_by_id(params[:id])
   end
 
   def task_params
