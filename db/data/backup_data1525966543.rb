@@ -1,3 +1,5 @@
+
+ 
 Company.create!([
   {name: "Network", city: "hometown", state: "homestate", url: "me.com", about: "about me"},
   {name: "Acme", city: "Albany", state: "NY", url: "http://www.acme.com", about: "Coyote is after you."},
@@ -22,16 +24,7 @@ Job.create!([
   {title: "web dev", url: "http://www.monster.com?job_id=5", company_id: 1, description: "web dev with strong SQL skills", requirements: "wordpress, drupal, SQL Server", instructions: "email resume, NO CALLS"},
   {title: "software engineer", url: "http://www.monster.com?job_id=6", company_id: 1, description: "application dev with some web aspects", requirements: "C#, .NET, rails, js, ajax", instructions: "online technical test first"}
 ])
-Log.create!([
-  {task_id: 1, note: "Find the right contact"},
-  {task_id: 1, note: "Follow up on meeting"},
-  {task_id: 2, note: "Ask for referral"},
-  {task_id: 2, note: "Research requirements"},
-  {task_id: 3, note: "Find another contact to get in this company"},
-  {task_id: 3, note: "Send thank you note."},
-  {task_id: 4, note: "Do coding challenge."},
-  {task_id: 4, note: "Prepare for interview."}
-])
+ 
 Step.create!([
   {name: "choose_step!", category: "choose_step!"},
   {name: "study", category: "techprep"},
@@ -56,16 +49,7 @@ Step.create!([
   {name: "interview", category: "jobsearch"},
   {name: "fup", category: "jobsearch"}
 ])
-Task.create!([
-  {user_id: 1, step_id: 2, job_id: 1, contact_id: 1, company_id: 1, due_date: "2017-03-26", description: "get on it man!", priority: 1},
-  {user_id: 1, step_id: 3, job_id: 2, contact_id: 2, company_id: 1, due_date: "2017-03-26", description: "had a good phone interview", priority: 2},
-  {user_id: 2, step_id: 1, job_id: 3, contact_id: 3, company_id: 1, due_date: "2017-04-15", description: "looking for PHP Guru", priority: 3},
-  {user_id: 2, step_id: 4, job_id: 4, contact_id: 4, company_id: 1, due_date: "2017-04-12", description: "great Rails shop, jrs welcome", priority: 4},
-  {user_id: 3, step_id: 10, job_id: 5, contact_id: 1, company_id: 1, due_date: "2017-03-30", description: "get on it man!", priority: 1},
-  {user_id: 3, step_id: 16, job_id: 1, contact_id: 2, company_id: 1, due_date: "2017-05-30", description: "no data on this yet", priority: 2},
-  {user_id: 4, step_id: 17, job_id: 2, contact_id: 4, company_id: 1, due_date: "2017-04-03", description: "need to find HR contact", priority: 3},
-  {user_id: 4, step_id: 18, job_id: 3, contact_id: 3, company_id: 1, due_date: "2017-03-28", description: "my friend knows a guy here", priority: 1}
-])
+ 
 User.create!([
   {name: nil, email: "ned@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
   {name: nil, email: "max@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
@@ -77,4 +61,27 @@ User.create!([
   {name: nil, email: "cole@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
   {name: nil, email: "ted@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
   {name: nil, email: "fred@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil}
+])
+ 
+
+Task.create!([
+  {user_id: 1, step_id: 2, job_id: 1, contact_id: 1, company_id: 1, due_date: "2017-03-26", description: "get on it man!", priority: 1},
+  {user_id: 1, step_id: 3, job_id: 2, contact_id: 2, company_id: 1, due_date: "2017-03-26", description: "had a good phone interview", priority: 2},
+  {user_id: 2, step_id: 1, job_id: 3, contact_id: 3, company_id: 1, due_date: "2017-04-15", description: "looking for PHP Guru", priority: 3},
+  {user_id: 2, step_id: 4, job_id: 4, contact_id: 4, company_id: 1, due_date: "2017-04-12", description: "great Rails shop, jrs welcome", priority: 4},
+  {user_id: 3, step_id: 10, job_id: 5, contact_id: 1, company_id: 1, due_date: "2017-03-30", description: "get on it man!", priority: 1},
+  {user_id: 3, step_id: 16, job_id: 1, contact_id: 2, company_id: 1, due_date: "2017-05-30", description: "no data on this yet", priority: 2},
+  {user_id: 4, step_id: 17, job_id: 2, contact_id: 4, company_id: 1, due_date: "2017-04-03", description: "need to find HR contact", priority: 3},
+  {user_id: 4, step_id: 18, job_id: 3, contact_id: 3, company_id: 1, due_date: "2017-03-28", description: "my friend knows a guy here", priority: 1}
+])
+
+Log.create!([
+  {task_id: 1, note: "Find the right contact"},
+  {task_id: 1, note: "Follow up on meeting"},
+  {task_id: 2, note: "Ask for referral"},
+  {task_id: 2, note: "Research requirements"},
+  {task_id: 3, note: "Find another contact to get in this company"},
+  {task_id: 3, note: "Send thank you note."},
+  {task_id: 4, note: "Do coding challenge."},
+  {task_id: 4, note: "Prepare for interview."}
 ])
