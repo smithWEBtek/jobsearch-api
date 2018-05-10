@@ -40,8 +40,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'rack-cors'
-gem 'rails-erd'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'seed_dump'
+gem 'activeadmin', github: 'activeadmin'
 
 group :development, :test do
   gem 'foreman', '~> 0.82.0'
