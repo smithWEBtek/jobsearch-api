@@ -1,0 +1,772 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2018-05-10 17:32:05.789973'
+    - '2018-05-10 17:32:05.789973'
+
+---
+companies:
+  columns:
+  - id
+  - name
+  - city
+  - state
+  - url
+  - about
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Network
+    - hometown
+    - homestate
+    - me.com
+    - about me
+    - '2018-05-10 17:32:05.990026'
+    - '2018-05-10 17:32:05.990026'
+  - - 2
+    - Acme
+    - Albany
+    - NY
+    - http://www.acme.com
+    - Coyote is after you.
+    - '2018-05-10 17:32:05.992745'
+    - '2018-05-10 17:32:05.992745'
+  - - 3
+    - Sears
+    - Clifton
+    - NJ
+    - http://www.sears.com
+    - Everything for the home.
+    - '2018-05-10 17:32:05.994523'
+    - '2018-05-10 17:32:05.994523'
+  - - 4
+    - Walmart
+    - Bentonville
+    - AK
+    - http://www.walmart.com
+    - Always the low price.
+    - '2018-05-10 17:32:05.996321'
+    - '2018-05-10 17:32:05.996321'
+  - - 5
+    - Ace THE Hardware
+    - Tulsa
+    - OK
+    - http://www.acehardware.com
+    - Ace is the place for the helpful hardware mammal.
+    - '2018-05-10 17:32:05.999089'
+    - '2018-05-10 17:32:05.999089'
+  - - 6
+    - JB Hunt
+    - Chicago
+    - IL
+    - http://www.jbhunt.com
+    - Ship it!
+    - '2018-05-10 17:32:06.001771'
+    - '2018-05-10 17:32:06.001771'
+  - - 7
+    - Pepsi Co
+    - Louisville
+    - KY
+    - http://www.pepsico.com
+    - You want Pepsi, not Coke
+    - '2018-05-10 17:32:06.003813'
+    - '2018-05-10 17:32:06.003813'
+  - - 8
+    - annkissam
+    - Boston
+    - MA
+    - http://www.annkissam.com/careers
+    - 'Annkissam was founded in 2007 to provide innovative, affordable technology
+      solutions for mission-driven organizations. '
+    - '2018-05-10 17:32:06.005856'
+    - '2018-05-10 17:32:06.005856'
+
+---
+contacts:
+  columns:
+  - id
+  - company_id
+  - fname
+  - lname
+  - title
+  - email
+  - phone
+  - url
+  - linkedin
+  - twitter
+  - about
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - Brad
+    - Smith
+    - Owner
+    - brad@smithwebtek.com
+    - 603-494-4147
+    - http://www.smithwebtek.com
+    - 
+    - 
+    - Web dev prepping
+    - '2018-05-10 17:32:06.037613'
+    - '2018-05-10 17:32:06.037613'
+  - - 2
+    - 1
+    - Jerry
+    - Seinfeld
+    - Star
+    - jerry@seinfeld.com
+    - 212-313-4234
+    - http://www.seinfeld.com
+    - 
+    - 
+    - Not that there's anything wrong with that..
+    - '2018-05-10 17:32:06.041514'
+    - '2018-05-10 17:32:06.041514'
+  - - 3
+    - 1
+    - Barney
+    - Rubble
+    - Quarry Worker
+    - barney@rock.com
+    - 243-113-2441
+    - http://www.rock.com
+    - 
+    - 
+    - Hey Fred! Are bowling or what?
+    - '2018-05-10 17:32:06.044497'
+    - '2018-05-10 17:32:06.044497'
+  - - 4
+    - 1
+    - Fred
+    - Flintstone
+    - Quarry Boss
+    - fred@rock.com
+    - 608-495-4887
+    - http://www.rock.com
+    - 
+    - 
+    - Is dinner ready?
+    - '2018-05-10 17:32:06.047339'
+    - '2018-05-10 17:32:06.047339'
+
+---
+jobs:
+  columns:
+  - id
+  - title
+  - url
+  - company_id
+  - description
+  - requirements
+  - instructions
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - jr rails dev
+    - http://www.monster.com?job_id=1
+    - 1
+    - rails dev needed
+    - rails, js, ajax
+    - apply online
+    - '2018-05-10 17:32:06.174482'
+    - '2018-05-10 17:32:06.174482'
+  - - 2
+    - full stack dev
+    - http://www.monster.com?job_id=2
+    - 1
+    - full stack shop
+    - python, js, ajax, node
+    - send resume, call HR
+    - '2018-05-10 17:32:06.177965'
+    - '2018-05-10 17:32:06.177965'
+  - - 3
+    - rails team member
+    - http://www.monster.com?job_id=3
+    - 1
+    - rails R us
+    - rails, js, ajax, ember, SQL
+    - apply by April 23
+    - '2018-05-10 17:32:06.180777'
+    - '2018-05-10 17:32:06.180777'
+  - - 4
+    - front end dev
+    - http://www.monster.com?job_id=4
+    - 1
+    - pretty sites wanted
+    - bootstrap, js, css
+    - apply online, send URLs of your work
+    - '2018-05-10 17:32:06.18359'
+    - '2018-05-10 17:32:06.18359'
+  - - 5
+    - web dev
+    - http://www.monster.com?job_id=5
+    - 1
+    - web dev with strong SQL skills
+    - wordpress, drupal, SQL Server
+    - email resume, NO CALLS
+    - '2018-05-10 17:32:06.18628'
+    - '2018-05-10 17:32:06.18628'
+  - - 6
+    - software engineer
+    - http://www.monster.com?job_id=6
+    - 1
+    - application dev with some web aspects
+    - C#, .NET, rails, js, ajax
+    - online technical test first
+    - '2018-05-10 17:32:06.188773'
+    - '2018-05-10 17:32:06.188773'
+
+---
+logs:
+  columns:
+  - id
+  - task_id
+  - note
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - Find the right contact
+    - '2018-05-10 17:32:06.290123'
+    - '2018-05-10 17:32:06.290123'
+  - - 2
+    - 1
+    - Follow up on meeting
+    - '2018-05-10 17:32:06.293273'
+    - '2018-05-10 17:32:06.293273'
+  - - 3
+    - 2
+    - Ask for referral
+    - '2018-05-10 17:32:06.295781'
+    - '2018-05-10 17:32:06.295781'
+  - - 4
+    - 2
+    - Research requirements
+    - '2018-05-10 17:32:06.29865'
+    - '2018-05-10 17:32:06.29865'
+  - - 5
+    - 3
+    - Find another contact to get in this company
+    - '2018-05-10 17:32:06.301345'
+    - '2018-05-10 17:32:06.301345'
+  - - 6
+    - 3
+    - Send thank you note.
+    - '2018-05-10 17:32:06.303907'
+    - '2018-05-10 17:32:06.303907'
+  - - 7
+    - 4
+    - Do coding challenge.
+    - '2018-05-10 17:32:06.306577'
+    - '2018-05-10 17:32:06.306577'
+  - - 8
+    - 4
+    - Prepare for interview.
+    - '2018-05-10 17:32:06.309465'
+    - '2018-05-10 17:32:06.309465'
+
+---
+steps:
+  columns:
+  - id
+  - name
+  - category
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - choose_step!
+    - choose_step!
+    - '2018-05-10 17:32:06.119914'
+    - '2018-05-10 17:32:06.119914'
+  - - 2
+    - study
+    - techprep
+    - '2018-05-10 17:32:06.122303'
+    - '2018-05-10 17:32:06.122303'
+  - - 3
+    - code
+    - techprep
+    - '2018-05-10 17:32:06.12399'
+    - '2018-05-10 17:32:06.12399'
+  - - 4
+    - gitcommit
+    - techprep
+    - '2018-05-10 17:32:06.12568'
+    - '2018-05-10 17:32:06.12568'
+  - - 5
+    - blog
+    - techprep
+    - '2018-05-10 17:32:06.127446'
+    - '2018-05-10 17:32:06.127446'
+  - - 6
+    - elevator_pitch
+    - branding
+    - '2018-05-10 17:32:06.129056'
+    - '2018-05-10 17:32:06.129056'
+  - - 7
+    - resume
+    - branding
+    - '2018-05-10 17:32:06.130844'
+    - '2018-05-10 17:32:06.130844'
+  - - 8
+    - twitter_url
+    - branding
+    - '2018-05-10 17:32:06.132598'
+    - '2018-05-10 17:32:06.132598'
+  - - 9
+    - linkedin_url
+    - branding
+    - '2018-05-10 17:32:06.134247'
+    - '2018-05-10 17:32:06.134247'
+  - - 10
+    - github_url
+    - branding
+    - '2018-05-10 17:32:06.135873'
+    - '2018-05-10 17:32:06.135873'
+  - - 11
+    - learn_student_profile_url
+    - branding
+    - '2018-05-10 17:32:06.137513'
+    - '2018-05-10 17:32:06.137513'
+  - - 12
+    - blog_site_url
+    - branding
+    - '2018-05-10 17:32:06.139168'
+    - '2018-05-10 17:32:06.139168'
+  - - 13
+    - portfolio_site_url
+    - branding
+    - '2018-05-10 17:32:06.140775'
+    - '2018-05-10 17:32:06.140775'
+  - - 14
+    - git_count_commits_via_API
+    - branding
+    - '2018-05-10 17:32:06.142338'
+    - '2018-05-10 17:32:06.142338'
+  - - 15
+    - research
+    - jobsearch
+    - '2018-05-10 17:32:06.144081'
+    - '2018-05-10 17:32:06.144081'
+  - - 16
+    - network
+    - jobsearch
+    - '2018-05-10 17:32:06.145738'
+    - '2018-05-10 17:32:06.145738'
+  - - 17
+    - apply
+    - jobsearch
+    - '2018-05-10 17:32:06.147438'
+    - '2018-05-10 17:32:06.147438'
+  - - 18
+    - email
+    - jobsearch
+    - '2018-05-10 17:32:06.149469'
+    - '2018-05-10 17:32:06.149469'
+  - - 19
+    - call
+    - jobsearch
+    - '2018-05-10 17:32:06.151081'
+    - '2018-05-10 17:32:06.151081'
+  - - 20
+    - meeting
+    - jobsearch
+    - '2018-05-10 17:32:06.152773'
+    - '2018-05-10 17:32:06.152773'
+  - - 21
+    - interview
+    - jobsearch
+    - '2018-05-10 17:32:06.154531'
+    - '2018-05-10 17:32:06.154531'
+  - - 22
+    - fup
+    - jobsearch
+    - '2018-05-10 17:32:06.156251'
+    - '2018-05-10 17:32:06.156251'
+
+---
+tasks:
+  columns:
+  - id
+  - user_id
+  - step_id
+  - job_id
+  - contact_id
+  - company_id
+  - due_date
+  - description
+  - priority
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - 2
+    - 1
+    - 1
+    - 1
+    - '2017-03-26'
+    - get on it man!
+    - 1
+    - '2018-05-10 17:32:06.227875'
+    - '2018-05-10 17:32:06.227875'
+  - - 2
+    - 1
+    - 3
+    - 2
+    - 2
+    - 1
+    - '2017-03-26'
+    - had a good phone interview
+    - 2
+    - '2018-05-10 17:32:06.235003'
+    - '2018-05-10 17:32:06.235003'
+  - - 3
+    - 2
+    - 1
+    - 3
+    - 3
+    - 1
+    - '2017-04-15'
+    - looking for PHP Guru
+    - 3
+    - '2018-05-10 17:32:06.241359'
+    - '2018-05-10 17:32:06.241359'
+  - - 4
+    - 2
+    - 4
+    - 4
+    - 4
+    - 1
+    - '2017-04-12'
+    - great Rails shop, jrs welcome
+    - 4
+    - '2018-05-10 17:32:06.248204'
+    - '2018-05-10 17:32:06.248204'
+  - - 5
+    - 3
+    - 10
+    - 5
+    - 1
+    - 1
+    - '2017-03-30'
+    - get on it man!
+    - 1
+    - '2018-05-10 17:32:06.255533'
+    - '2018-05-10 17:32:06.255533'
+  - - 6
+    - 3
+    - 16
+    - 1
+    - 2
+    - 1
+    - '2017-05-30'
+    - no data on this yet
+    - 2
+    - '2018-05-10 17:32:06.262268'
+    - '2018-05-10 17:32:06.262268'
+  - - 7
+    - 4
+    - 17
+    - 2
+    - 4
+    - 1
+    - '2017-04-03'
+    - need to find HR contact
+    - 3
+    - '2018-05-10 17:32:06.269063'
+    - '2018-05-10 17:32:06.269063'
+  - - 8
+    - 4
+    - 18
+    - 3
+    - 3
+    - 1
+    - '2017-03-28'
+    - my friend knows a guy here
+    - 1
+    - '2018-05-10 17:32:06.275407'
+    - '2018-05-10 17:32:06.275407'
+
+---
+users:
+  columns:
+  - id
+  - name
+  - email
+  - password
+  - phone1
+  - phone2
+  - address_line1
+  - address_line2
+  - city
+  - state
+  - zip
+  - elevator_pitch
+  - resume
+  - twitter_url
+  - linkedin_url
+  - github_url
+  - learn_student_profile_url
+  - blog_site_url
+  - portfolio_site_url
+  - coach_name
+  - coach_email
+  - coach_slack
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 
+    - nedster@abc.com
+    - pointer
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2018-05-10 17:32:06.081807'
+    - '2018-05-10 17:32:06.081807'
+  - - 2
+    - 
+    - max@abc.com
+    - pointer
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2018-05-10 17:32:06.085393'
+    - '2018-05-10 17:32:06.085393'
+  - - 3
+    - 
+    - skai@abc.com
+    - pointer
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2018-05-10 17:32:06.088116'
+    - '2018-05-10 17:32:06.088116'
+  - - 4
+    - 
+    - kaleo@abc.com
+    - pointer
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2018-05-10 17:32:06.09089'
+    - '2018-05-10 17:32:06.09089'
+  - - 5
+    - 
+    - megan@abc.com
+    - pointer
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2018-05-10 17:32:06.093751'
+    - '2018-05-10 17:32:06.093751'
+  - - 6
+    - 
+    - tenzing@abc.com
+    - pointer
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2018-05-10 17:32:06.096573'
+    - '2018-05-10 17:32:06.096573'
+  - - 7
+    - 
+    - davis@abc.com
+    - pointer
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2018-05-10 17:32:06.099386'
+    - '2018-05-10 17:32:06.099386'
+  - - 8
+    - 
+    - cole@abc.com
+    - pointer
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2018-05-10 17:32:06.102665'
+    - '2018-05-10 17:32:06.102665'
+  - - 9
+    - 
+    - ted@abc.com
+    - pointer
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2018-05-10 17:32:06.105619'
+    - '2018-05-10 17:32:06.105619'
+  - - 10
+    - 
+    - fred@abc.com
+    - pointer
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2018-05-10 17:32:06.108358'
+    - '2018-05-10 17:32:06.108358'
