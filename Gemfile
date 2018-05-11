@@ -19,17 +19,10 @@ gem 'httparty'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # gem 'rails', '~> 5.0.2'
 gem 'rails', '~> 5.1.0'
- 
-
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
-# Use Puma as the app server
+gem 'pg', '~> 0.18' 
 gem 'puma', '~> 3.0'
+gem 'yaml_db'
  
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
@@ -43,7 +36,6 @@ gem 'rack-cors'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'seed_dump'
 gem 'activeadmin', github: 'activeadmin'
-
 group :development, :test do
   gem 'foreman', '~> 0.82.0'
   gem 'pry'
