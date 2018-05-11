@@ -7,12 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-		origins
-		'https://swt-jobsearch-client.herokuapp.com',
-		'http://localhost:3000', 
-		'https://localhost:3000', 
-		'https://127.0.0.1:3000', 
-		'http://127.0.0.1:3000'
+		origins 'https://swt-jobsearch-client.herokuapp.com', 'http://localhost:3000', 'https://localhost:3000', 'https://127.0.0.1:3000', 'http://127.0.0.1:3000'
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
