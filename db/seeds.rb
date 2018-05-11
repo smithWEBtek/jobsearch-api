@@ -4,7 +4,7 @@ def companies
 		{name: "Acme", city: "Albany", state: "NY", url: "http://www.acme.com", about: "Coyote is after you."},
 		{name: "Sears", city: "Clifton", state: "NJ", url: "http://www.sears.com", about: "Everything for the home."},
 		{name: "Walmart", city: "Bentonville", state: "AK", url: "http://www.walmart.com", about: "Always the low price."},
-		{name: "Ace Hardware", city: "Tulsa", state: "OK", url: "http://www.acehardware.com", about: "Ace is the place for the helpful hardware mammal."},
+		{name: "Ace THE Hardware", city: "Tulsa", state: "OK", url: "http://www.acehardware.com", about: "Ace is the place for the helpful hardware mammal."},
 		{name: "JB Hunt", city: "Chicago", state: "IL", url: "http://www.jbhunt.com", about: "Ship it!"},
 		{name: "Pepsi Co", city: "Louisville", state: "KY", url: "http://www.pepsico.com", about: "You want Pepsi, not Coke"},
 		{name: "annkissam", city: "Boston", state: "MA", url: "http://www.annkissam.com/careers", about: "Annkissam was founded in 2007 to provide innovative, affordable technology solutions for mission-driven organizations. "}
@@ -60,7 +60,7 @@ end
 
 def users
 	User.create!([
-		{name: nil, email: "ned@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
+		{name: nil, email: "nedster@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
 		{name: nil, email: "max@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
 		{name: nil, email: "skai@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
 		{name: nil, email: "kaleo@abc.com", password: "pointer", phone1: nil, phone2: nil, address_line1: nil, address_line2: nil, city: nil, state: nil, zip: nil, elevator_pitch: nil, resume: nil, twitter_url: nil, linkedin_url: nil, github_url: nil, learn_student_profile_url: nil, blog_site_url: nil, portfolio_site_url: nil, coach_name: nil, coach_email: nil, coach_slack: nil},
