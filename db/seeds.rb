@@ -1,6 +1,6 @@
 def companies
 	Company.create!([
-		{name: "Network", city: "hometown", state: "homestate", url: "me.com", about: "about me"},
+		{name: "unspecified", city: "unspecified", state: "unspecified", url: "unspecified", about: "unspecified"},
 		{name: "Acme", city: "Albany", state: "NY", url: "http://www.acme.com", about: "Coyote is after you."},
 		{name: "Sears", city: "Clifton", state: "NJ", url: "http://www.sears.com", about: "Everything for the home."},
 		{name: "Walmart", city: "Bentonville", state: "AK", url: "http://www.walmart.com", about: "Always the low price."},
@@ -13,10 +13,10 @@ end
 
 def contacts
 	Contact.create!([
-		{company_id: 1, fname: "Brad", lname: "Smith", title: "Owner", email: "brad@smithwebtek.com", phone: "603-494-4147", url: "http://www.smithwebtek.com", linkedin: nil, twitter: nil, about: "Web dev prepping"},
-		{company_id: 1, fname: "Jerry", lname: "Seinfeld", title: "Star", email: "jerry@seinfeld.com", phone: "212-313-4234", url: "http://www.seinfeld.com", linkedin: nil, twitter: nil, about: "Not that there's anything wrong with that.."},
-		{company_id: 1, fname: "Barney", lname: "Rubble", title: "Quarry Worker", email: "barney@rock.com", phone: "243-113-2441", url: "http://www.rock.com", linkedin: nil, twitter: nil, about: "Hey Fred! Are bowling or what?"},
-		{company_id: 1, fname: "Fred", lname: "Flintstone", title: "Quarry Boss", email: "fred@rock.com", phone: "608-495-4887", url: "http://www.rock.com", linkedin: nil, twitter: nil, about: "Is dinner ready?"}
+		{company_id: 1, fname: "Brad", lname: "Smith", title: "Owner", email: "brad@smithwebtek.com", phone: "603-494-4147", url: "http://www.smithwebtek.com", linkedin: "unspecified", twitter:  "unspecified", about: "Web dev prepping"},
+		{company_id: 1, fname: "Jerry", lname: "Seinfeld", title: "Star", email: "jerry@seinfeld.com", phone: "212-313-4234", url: "http://www.seinfeld.com", linkedin: "unspecified", twitter:  "unspecified", about: "Not that there's anything wrong with that.."},
+		{company_id: 1, fname: "Barney", lname: "Rubble", title: "Quarry Worker", email: "barney@rock.com", phone: "243-113-2441", url: "http://www.rock.com", linkedin: "unspecified", twitter:  "unspecified", about: "Hey Fred! Are bowling or what?"},
+		{company_id: 1, fname: "Fred", lname: "Flintstone", title: "Quarry Boss", email: "fred@rock.com", phone: "608-495-4887", url: "http://www.rock.com", linkedin: "unspecified", twitter:  "unspecified", about: "Is dinner ready?"}
 	])
 end
 

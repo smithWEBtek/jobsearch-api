@@ -4,13 +4,13 @@ class CreateContacts < ActiveRecord::Migration[5.0]
       t.integer :company_id, default: 1
       t.string :fname
       t.string :lname
-      t.string :title
-      t.string :email
-      t.string :phone
-			t.string :url
-			t.string :linkedin
-			t.string :twitter
-      t.text :about
+      t.string :title, default: 'unspecified'
+      t.string :email, default: 'unspecified'
+      t.string :phone, default: 'unspecified'
+			t.string :url, default: 'unspecified'
+			t.string :linkedin, default: 'unspecified'
+			t.string :twitter, default: 'unspecified'
+      t.text :about, default: 'unspecified'
 
       t.timestamps
     end
