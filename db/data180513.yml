@@ -89,14 +89,6 @@ companies:
       solutions for mission-driven organizations. '
     - '2018-05-10 17:32:06.005856'
     - '2018-05-10 17:32:06.005856'
-  - - 9
-    - Wayfair
-    - Boston
-    - MA
-    - www.wayfair.com
-    - furniture online
-    - '2018-05-13 17:32:40.244079'
-    - '2018-05-13 17:32:40.244079'
 
 ---
 contacts:
@@ -116,7 +108,7 @@ contacts:
   - updated_at
   records: 
   - - 1
-    - 9
+    - 1
     - Brad
     - Smith
     - Owner
@@ -127,9 +119,9 @@ contacts:
     - 
     - Web dev prepping
     - '2018-05-10 17:32:06.037613'
-    - '2018-05-13 18:22:08.998444'
+    - '2018-05-10 17:32:06.037613'
   - - 2
-    - 7
+    - 1
     - Jerry
     - Seinfeld
     - Star
@@ -140,9 +132,9 @@ contacts:
     - 
     - Not that there's anything wrong with that..
     - '2018-05-10 17:32:06.041514'
-    - '2018-05-13 18:20:16.739061'
+    - '2018-05-10 17:32:06.041514'
   - - 3
-    - 3
+    - 1
     - Barney
     - Rubble
     - Quarry Worker
@@ -153,9 +145,9 @@ contacts:
     - 
     - Hey Fred! Are bowling or what?
     - '2018-05-10 17:32:06.044497'
-    - '2018-05-13 18:22:25.941341'
+    - '2018-05-10 17:32:06.044497'
   - - 4
-    - 6
+    - 1
     - Fred
     - Flintstone
     - Quarry Boss
@@ -166,20 +158,7 @@ contacts:
     - 
     - Is dinner ready?
     - '2018-05-10 17:32:06.047339'
-    - '2018-05-13 18:21:58.398953'
-  - - 5
-    - 9
-    - James
-    - Rogers
-    - Software Engineer
-    - jarogers@wayfair.com
-    - 617123-4133
-    - www.jamesrogers.com
-    - jrogers
-    - asdf
-    - 
-    - '2018-05-13 17:26:40.691774'
-    - '2018-05-13 18:19:57.577198'
+    - '2018-05-10 17:32:06.047339'
 
 ---
 jobs:
