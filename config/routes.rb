@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
-  root 'api/tasks#index'
+  root 'api/companies#index'
+
+	get 'api/backup', to: 'application#backup'
 
 	namespace :api do
 		resources :steps
