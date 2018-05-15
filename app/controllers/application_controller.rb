@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
 
 	def backup
-		exec 'rake db:data:dump && rails s -p 3001'
+		exec 'rake db:data:dump && rake restart'
 	end
 end
