@@ -10,7 +10,10 @@ class Api::ContactsController < ApplicationController
 		render json: @contact
   end
 
-  def create
+	def create
+		
+binding.pry
+
     @contact = Contact.new(contact_params)
     if @contact.save
       render json: @contact
