@@ -33,28 +33,26 @@ end
 
 def steps
 	Step.create!([
-		{name: "choose_step!", category: "choose_step!"},
-		{name: "study", category: "techprep"},
-		{name: "code", category: "techprep"},
-		{name: "gitcommit", category: "techprep"},
-		{name: "blog", category: "techprep"},
-		{name: "elevator_pitch", category: "branding"},
-		{name: "resume", category: "branding"},
-		{name: "twitter_url", category: "branding"},
-		{name: "linkedin_url", category: "branding"},
-		{name: "github_url", category: "branding"},
-		{name: "learn_student_profile_url", category: "branding"},
-		{name: "blog_site_url", category: "branding"},
-		{name: "portfolio_site_url", category: "branding"},
-		{name: "git_count_commits_via_API", category: "branding"},
-		{name: "research", category: "jobsearch"},
-		{name: "network", category: "jobsearch"},
-		{name: "apply", category: "jobsearch"},
-		{name: "email", category: "jobsearch"},
-		{name: "call", category: "jobsearch"},
-		{name: "meeting", category: "jobsearch"},
-		{name: "interview", category: "jobsearch"},
-		{name: "fup", category: "jobsearch"}
+		{name: "study", category: "01-techprep"},
+		{name: "code", category: "01-techprep"},
+		{name: "gitcommit", category: "01-techprep"},
+		{name: "blog", category: "01-techprep"},
+		{name: "elevator_pitch", category: "02-branding"},
+		{name: "resume", category: "02-branding"},
+		{name: "twitter_url", category: "02-branding"},
+		{name: "linkedin_url", category: "02-branding"},
+		{name: "github_url", category: "02-branding"},
+		{name: "learn_student_profile_url", category: "02-branding"},
+		{name: "blog_site_url", category: "02-branding"},
+		{name: "portfolio_site_url", category: "02-branding"},
+		{name: "research", category: "03-jobsearch"},
+		{name: "network", category: "03-jobsearch"},
+		{name: "apply", category: "03-jobsearch"},
+		{name: "email", category: "03-jobsearch"},
+		{name: "call", category: "03-jobsearch"},
+		{name: "meeting", category: "03-jobsearch"},
+		{name: "interview", category: "03-jobsearch"},
+		{name: "fup", category: "03-jobsearch"}
 	])
 end 
 
