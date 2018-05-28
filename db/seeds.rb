@@ -73,27 +73,14 @@ end
 
 def tasks
 	Task.create!([
-		{user_id: 1, step_id: 2, job_id: 1, contact_id: 1, company_id: 1, due_date: "2017-03-26", description: "get on it man!", priority: 1},
-		{user_id: 1, step_id: 3, job_id: 2, contact_id: 2, company_id: 1, due_date: "2017-03-26", description: "had a good phone interview", priority: 2},
-		{user_id: 2, step_id: 1, job_id: 3, contact_id: 3, company_id: 1, due_date: "2017-04-15", description: "looking for PHP Guru", priority: 3},
-		{user_id: 2, step_id: 4, job_id: 4, contact_id: 4, company_id: 1, due_date: "2017-04-12", description: "great Rails shop, jrs welcome", priority: 4},
-		{user_id: 3, step_id: 10, job_id: 5, contact_id: 1, company_id: 1, due_date: "2017-03-30", description: "get on it man!", priority: 1},
-		{user_id: 3, step_id: 16, job_id: 1, contact_id: 2, company_id: 1, due_date: "2017-05-30", description: "no data on this yet", priority: 2},
-		{user_id: 4, step_id: 17, job_id: 2, contact_id: 4, company_id: 1, due_date: "2017-04-03", description: "need to find HR contact", priority: 3},
-		{user_id: 4, step_id: 18, job_id: 3, contact_id: 3, company_id: 1, due_date: "2017-03-28", description: "my friend knows a guy here", priority: 1}
-	])
-end
-
-def logs
-	Log.create!([
-		{task_id: 1, note: "Find the right contact"},
-		{task_id: 1, note: "Follow up on meeting"},
-		{task_id: 2, note: "Ask for referral"},
-		{task_id: 2, note: "Research requirements"},
-		{task_id: 3, note: "Find another contact to get in this company"},
-		{task_id: 3, note: "Send thank you note."},
-		{task_id: 4, note: "Do coding challenge."},
-		{task_id: 4, note: "Prepare for interview."}
+		{user_id: 1, step_id: 2, job_id: 1, contact_id: 1, company_id: 1, due_date: "2017-03-26", title: "task1", notes: "get on it man!", priority: 1},
+		{user_id: 1, step_id: 3, job_id: 2, contact_id: 2, company_id: 1, due_date: "2017-03-26", title: "task2", notes: "had a good phone interview", priority: 2},
+		{user_id: 2, step_id: 1, job_id: 3, contact_id: 3, company_id: 1, due_date: "2017-04-15", title: "task3", notes: "looking for PHP Guru", priority: 3},
+		{user_id: 2, step_id: 4, job_id: 4, contact_id: 4, company_id: 1, due_date: "2017-04-12", title: "task4", notes: "great Rails shop, jrs welcome", priority: 4},
+		{user_id: 3, step_id: 10, job_id: 5, contact_id: 1, company_id: 1, due_date: "2017-03-30", title: "task5", notes: "get on it man!", priority: 1},
+		{user_id: 3, step_id: 16, job_id: 1, contact_id: 2, company_id: 1, due_date: "2017-05-30", title: "task6", notes: "no data on this yet", priority: 2},
+		{user_id: 4, step_id: 17, job_id: 2, contact_id: 4, company_id: 1, due_date: "2017-04-03", title: "task7", notes: "need to find HR contact", priority: 3},
+		{user_id: 4, step_id: 18, job_id: 3, contact_id: 3, company_id: 1, due_date: "2017-03-28", title: "task8", notes: "my friend knows a guy here", priority: 1}
 	])
 end
 
@@ -104,7 +91,6 @@ def main
 	steps
 	jobs
 	tasks
-	logs
 end
 
 main

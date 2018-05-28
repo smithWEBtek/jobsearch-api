@@ -11,6 +11,5 @@ Rails.application.routes.draw do
 		resources :contacts
 		resources :users
 		resources :tasks
-		resources :logs
 	end
 end
